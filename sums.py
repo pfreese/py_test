@@ -1,10 +1,11 @@
-print("Hello world!")
 
-a, b = 3, 4
 
-print(a, b)
+def swap(lst):
+    if len(lst) < 2:
+        return lst
+    first = lst[0]
+    last = lst[-1]
+    return [last] + lst[1:-1] + [first]
 
-print(isinstance(3, int))
-print(isinstance(3.0, int))
-
-import numpy
+print(swap([12, 35, 9, 56, 24]))
+print(swap([1, 2, 3]))
