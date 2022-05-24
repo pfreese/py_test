@@ -14,7 +14,6 @@ def dfs(t: btrees.TreeNode) -> [int]:
         node = stack.pop()
 
         if node not in visited:
-            print("Adding!")
             dfsResult.append(node.val)
         visited.append(node)
 
@@ -25,13 +24,9 @@ def dfs(t: btrees.TreeNode) -> [int]:
             stack.append(node.right)
         if node.left:
             stack.append(node.left)
-        print(f"Stack length is: {len(stack)}")
 
     return dfsResult
 
 
-simpTree = btrees.to_binary_tree([1, 2, 3, None, None, 4, 5])
-complexTree = btrees.to_binary_tree([3, 5, 2, 1, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14])
-
-print(dfs(simpTree))
-print(dfs(complexTree))
+print(dfs(btrees.simpTree))
+print(dfs(btrees.complexTree))
