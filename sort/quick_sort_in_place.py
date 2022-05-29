@@ -1,37 +1,38 @@
-def mergeTwoSorted(s1, s2):
-    result = [None]*(len(s1) + len(s2))
-    s1_i = 0
-    s2_i = 0
-    r_i = 0
-    while s1_i < len(s1) and s2_i < len(s2):
-        if s1[s1_i] < s2[s2_i]:
-            result[r_i] = s1[s1_i]
-            s1_i += 1
-        else:
-            result[r_i] = s2[s2_i]
-            s2_i += 1
-        r_i += 1
-    while s1_i < len(s1):
-        result[r_i] = s1[s1_i]
-        s1_i += 1
-        r_i += 1
-    while s2_i < len(s2):
-        result[r_i] = s2[s2_i]
-        s2_i += 1
-        r_i += 1
-    return result
+# Partion array from [lowerInc, upperInc] (inclusive on both ends),
+# and return index where pivot element was placed.
+def partition(array, lowerInc, upperInc):
 
-def mergeSort(vals):
+    assert lowerInc < upperInc
+    pivotVal = array[lowerInc]
+    i, j = lowerInc + 1, lowerInc + 1
 
-    if len(vals) < 2:
-        return vals
-
-    mid = len(vals) // 2
-
-    sortedLowerHalf = mergeSort(vals[:mid])
-    sortedUpperHalf = mergeSort(vals[mid:])
-
-    return mergeTwoSorted(sortedLowerHalf, sortedUpperHalf)
+    while j <= upperInc:
+        if array[j] <= pivotVal:
+            array[i], array[j] = array[j], array[i]
+            i += 1
+        j += 1
+    array[i-1], array[lowerInc] = array[lowerInc], array[i-1]
+    return i-1
 
 
-print(mergeSort([0, 4, 2, 1, 98, 4, 2, 1, 0]))
+def quicksortPartial(array, lowerInc, upperInc):
+    if upperInc <= lowerInc:
+        return
+    assert lowerInc < upperInc, f"Failure in quicksortPartial(): {lowerInc} vs. {upperInc}"
+
+    i = partition(array, lowerInc, upperInc)
+    quicksortPartial(array, lowerInc, i-1)
+    quicksortPartial(array, i+1, upperInc)
+
+
+def quickSort(array):
+
+    quicksortPartial(array, 0, len(array) - 1)
+    return array
+
+
+print(quickSort([4, 7, 1, 2, 10, 4, 8, 0, 0, 1, 4, 0]))
+
+print(quickSort([5, 2, 1, 1.2, 0, 9, 7, 9]))
+print(quickSort([0]))
+print(quickSort([]))
