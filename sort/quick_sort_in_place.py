@@ -1,3 +1,5 @@
+import sort_utils
+
 # Partion array from [lowerInc, upperInc] (inclusive on both ends),
 # and return index where pivot element was placed.
 def partition(array, lowerInc, upperInc):
@@ -31,8 +33,15 @@ def quickSort(array):
     return array
 
 
-print(quickSort([4, 7, 1, 2, 10, 4, 8, 0, 0, 1, 4, 0]))
+# TESTS
 
-print(quickSort([5, 2, 1, 1.2, 0, 9, 7, 9]))
-print(quickSort([0]))
-print(quickSort([]))
+intsActual = quickSort(sort_utils.unsortedInts)
+assert intsActual == sort_utils.sortedInts
+print(intsActual)
+
+floatsActual = quickSort(sort_utils.unsortedFloats)
+assert floatsActual == sort_utils.sortedFloats
+print(floatsActual)
+
+assert quickSort([]) == []
+assert quickSort([2]) == [2]

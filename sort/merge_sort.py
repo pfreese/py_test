@@ -1,3 +1,5 @@
+import sort_utils
+
 def mergeTwoSorted(s1, s2):
     result = [None]*(len(s1) + len(s2))
     s1_i = 0
@@ -33,5 +35,15 @@ def mergeSort(vals):
 
     return mergeTwoSorted(sortedLowerHalf, sortedUpperHalf)
 
+# TESTS
 
-print(mergeSort([0, 4, 2, 1, 98, 4, 2, 1, 0]))
+intsActual = mergeSort(sort_utils.unsortedInts)
+assert intsActual == sort_utils.sortedInts
+print(intsActual)
+
+floatsActual = mergeSort(sort_utils.unsortedFloats)
+assert floatsActual == sort_utils.sortedFloats
+print(floatsActual)
+
+assert mergeSort([]) == []
+assert mergeSort([2]) == [2]

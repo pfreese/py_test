@@ -1,3 +1,5 @@
+import sort_utils
+
 import math
 import random
 
@@ -14,6 +16,8 @@ def insertionSort(array):
     return array
 
 def bucketSort(array):
+    if len(array) < 2:
+        return array
     buckets = {}
     max_val = max(array)
     min_val = min(array)
@@ -33,8 +37,15 @@ def bucketSort(array):
         result += insertionSort(buckets[i])
     return result
 
+# TESTS
 
-print(bucketSort([0, 4, 2, 1, 98, 4, 2, 1, 0]))
+intsActual = bucketSort(sort_utils.unsortedInts)
+assert intsActual == sort_utils.sortedInts
+print(intsActual)
 
-rs = [random.uniform(10.5, 75.5) for _ in range(100)]
-print(bucketSort(rs))
+floatsActual = bucketSort(sort_utils.unsortedFloats)
+assert floatsActual == sort_utils.sortedFloats
+print(floatsActual)
+
+assert bucketSort([]) == []
+assert bucketSort([2]) == [2]
