@@ -40,6 +40,8 @@ alphaResult = inOrderTraversal(btrees.alphaTree)
 assert alphaResult == btrees.alphaIIT
 print(alphaResult)
 
+assert inOrderTraversal(btrees.emptyTree) == []
+
 
 print("preOrderTraversal()s:")
 
@@ -51,6 +53,8 @@ alphaResult = preOrderTraversal(btrees.alphaTree)
 assert alphaResult == btrees.alphaPreOrderT
 print(alphaResult)
 
+assert preOrderTraversal(btrees.emptyTree) == []
+
 
 print("postOrderTraversal()s:")
 
@@ -61,3 +65,5 @@ print(numResult)
 alphaResult = postOrderTraversal(btrees.alphaTree)
 assert alphaResult == btrees.alphaPostOrderT
 print(alphaResult)
+
+assert postOrderTraversal(btrees.emptyTree) == []

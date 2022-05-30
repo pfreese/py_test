@@ -23,6 +23,7 @@ def to_binary_tree(items: list[int]) -> TreeNode:
 
     return inner()
 
+# Integers.
 numTree = to_binary_tree([1, 2, 3, 4, 5, 6, 7])
 numBFS = [1, 2, 3, 4, 5, 6, 7]
 numDFS = [1, 2, 4, 5, 3, 6, 7]
@@ -37,3 +38,6 @@ alphaDFS = ["A", "B", "D", "C", "E", "G", "H", "F", "I"]
 alphaIIT = ["D", "B", "A", "G", "E", "H", "C", "I", "F"]
 alphaPostOrderT = ["D", "B", "G", "H", "E", "I", "F", "C", "A"]
 alphaPreOrderT = ["A", "B", "D", "C", "E", "G", "H", "F", "I"]
+
+# Empty.
+emptyTree = to_binary_tree([])

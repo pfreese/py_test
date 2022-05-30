@@ -38,3 +38,5 @@ print(numResult)
 alphaResult = bfs(btrees.alphaTree)
 assert alphaResult == btrees.alphaBFS
 print(alphaResult)
+
+assert bfs(btrees.emptyTree) == []
