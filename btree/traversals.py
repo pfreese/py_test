@@ -31,13 +31,33 @@ def postOrderTraversal(t: btrees.TreeNode) -> [int]:
     return result
 
 print("inOrderTraversal()s:")
-print(inOrderTraversal(btrees.simpTree))
-print(inOrderTraversal(btrees.complexTree))
+
+numResult = inOrderTraversal(btrees.numTree)
+assert numResult == btrees.numIIT
+print(numResult)
+
+alphaResult = inOrderTraversal(btrees.alphaTree)
+assert alphaResult == btrees.alphaIIT
+print(alphaResult)
+
 
 print("preOrderTraversal()s:")
-print(preOrderTraversal(btrees.simpTree))
-print(preOrderTraversal(btrees.complexTree))
+
+numResult = preOrderTraversal(btrees.numTree)
+assert numResult == btrees.numPreOrderT
+print(numResult)
+
+alphaResult = preOrderTraversal(btrees.alphaTree)
+assert alphaResult == btrees.alphaPreOrderT
+print(alphaResult)
+
 
 print("postOrderTraversal()s:")
-print(postOrderTraversal(btrees.simpTree))
-print(postOrderTraversal(btrees.complexTree))
+
+numResult = postOrderTraversal(btrees.numTree)
+assert numResult == btrees.numPostOrderT
+print(numResult)
+
+alphaResult = postOrderTraversal(btrees.alphaTree)
+assert alphaResult == btrees.alphaPostOrderT
+print(alphaResult)
