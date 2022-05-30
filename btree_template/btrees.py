@@ -23,11 +23,5 @@ def to_binary_tree(items: list[int]) -> TreeNode:
 
     return inner()
 
-numTree = to_binary_tree([1, 2, 3, 4, 5, 6, 7])
-numBFS = [1, 2, 3, 4, 5, 6, 7]
-numDFS = [1, 2, 4, 5, 3, 6, 7]
-
-# Alphabetical.
-alphaTree = to_binary_tree(["A", "B", "C", "D", None, "E", "F", None, None, None, None, "G", "H", "I", None])
-alphaBFS = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
-alphaDFS = ["A", "B", "D", "C", "E", "G", "H", "F", "I"]
+simpTree = to_binary_tree([1, 2, 3, None, None, 4, 5])
+complexTree = to_binary_tree([3, 5, 2, 1, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14])

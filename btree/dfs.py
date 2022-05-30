@@ -28,5 +28,10 @@ def dfs(t: btrees.TreeNode) -> [int]:
     return dfsResult
 
 
-print(dfs(btrees.simpTree))
-print(dfs(btrees.complexTree))
+numResult = dfs(btrees.numTree)
+assert numResult == btrees.numDFS
+print(numResult)
+
+alphaResult = dfs(btrees.alphaTree)
+assert alphaResult == btrees.alphaDFS
+print(alphaResult)
