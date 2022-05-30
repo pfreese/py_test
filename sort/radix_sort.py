@@ -64,9 +64,6 @@ def radixSort(array):
 
 # TESTS
 
-#print(countingSort([0, 5, 1, 2, 9, 10], 1))
-#print(countingSort([0, 5, 1, 2, 9, 10], 10))
-
 actual = radixSort(sort_utils.radixInputVals)
 print(actual)
 assert actual == sort_utils.radixSortedVals
