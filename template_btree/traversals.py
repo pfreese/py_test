@@ -1,14 +1,14 @@
 import btrees
 
-def inOrderTraversal(t: btrees.TreeNode) -> [int]:
+def inOrderTraversal(t: btrees.TreeNode) -> []:
 
 
 
-def preOrderTraversal(t: btrees.TreeNode) -> [int]:
+def preOrderTraversal(t: btrees.TreeNode) -> []:
 
 
 
-def postOrderTraversal(t: btrees.TreeNode) -> [int]:
+def postOrderTraversal(t: btrees.TreeNode) -> []:
 
 
 

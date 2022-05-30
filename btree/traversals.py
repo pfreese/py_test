@@ -1,6 +1,6 @@
 import btrees
 
-def inOrderTraversal(t: btrees.TreeNode) -> [int]:
+def inOrderTraversal(t: btrees.TreeNode) -> []:
     result = []
     if t is None:
         return result
@@ -10,7 +10,7 @@ def inOrderTraversal(t: btrees.TreeNode) -> [int]:
 
     return result
 
-def preOrderTraversal(t: btrees.TreeNode) -> [int]:
+def preOrderTraversal(t: btrees.TreeNode) -> []:
     result = []
     if t is None:
         return result
@@ -20,7 +20,7 @@ def preOrderTraversal(t: btrees.TreeNode) -> [int]:
 
     return result
 
-def postOrderTraversal(t: btrees.TreeNode) -> [int]:
+def postOrderTraversal(t: btrees.TreeNode) -> []:
     result = []
     if t is None:
         return result

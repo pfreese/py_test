@@ -1,6 +1,6 @@
 import btrees
 
-def dfs(t: btrees.TreeNode) -> [int]:
+def dfs(t: btrees.TreeNode) -> []:
 
 
 

@@ -4,7 +4,7 @@ import btrees
 # track of the nodes visited.
 # But for a more general graph it is.
 
-def bfs(t: btrees.TreeNode) -> [int]:
+def bfs(t: btrees.TreeNode) -> []:
 
     visited = []
     queue = []
