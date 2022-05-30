@@ -23,15 +23,15 @@ def mergeTwoSorted(s1, s2):
         r_i += 1
     return result
 
-def mergeSort(vals):
+def mergeSort(array):
 
-    if len(vals) < 2:
-        return vals
+    if len(array) < 2:
+        return array
 
-    mid = len(vals) // 2
+    mid = len(array) // 2
 
-    sortedLowerHalf = mergeSort(vals[:mid])
-    sortedUpperHalf = mergeSort(vals[mid:])
+    sortedLowerHalf = mergeSort(array[:mid])
+    sortedUpperHalf = mergeSort(array[mid:])
 
     return mergeTwoSorted(sortedLowerHalf, sortedUpperHalf)
 
