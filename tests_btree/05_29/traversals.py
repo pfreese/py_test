@@ -1,15 +1,25 @@
 import btrees
 
 def inOrderTraversal(t: btrees.TreeNode) -> []:
-
+    result = []
+    if t is None:
+        return []
+    result += inOrderTraversal(t.left)
+    result.append(t.val)
+    result += inOrderTraversal(t.right)
+    return result
 
 
 def preOrderTraversal(t: btrees.TreeNode) -> []:
-
+    if t is None:
+        return []
+    return [t.val] + preOrderTraversal(t.left)  + preOrderTraversal(t.right)
 
 
 def postOrderTraversal(t: btrees.TreeNode) -> []:
-
+    if t is None:
+        return []
+    return postOrderTraversal(t.left)  + postOrderTraversal(t.right) + [t.val]
 
 
 print("inOrderTraversal()s:")

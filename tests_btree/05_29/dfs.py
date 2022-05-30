@@ -5,22 +5,22 @@ def dfs(t: btrees.TreeNode) -> []:
     if t is None:
         return []
 
-    result = []
+    # Keep track of the nodes visited.
+    nodesVisited = []
 
     stack = [t]
-    visited = [t]
 
     while stack:
-        if t.right and t.right not in visited:
-            visited.append(t.right)
-            stack.append(t.right)
+        node = stack.pop()
 
-        if t.left and t.left not in visited:
-            visited.append(t.left)
-            stack.append(t.left)
+        if node not in nodesVisited:
+            nodesVisited.append(node)
 
-
-
+        if node.right and node.right not in nodesVisited:
+            stack.append(node.right)
+        if node.left and node.left not in nodesVisited:
+            stack.append(node.left)
+    return [node.val for node in nodesVisited]
 
 
 
