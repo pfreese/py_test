@@ -2,20 +2,20 @@ import btrees
 
 def dfs(t: btrees.TreeNode) -> []:
 
-    dfsResult = []
+    # Note: keep track of the nodes here, and then return the values at
+    # the end if desired. This allows for the values to not be unique.
+    visitedNodes = []
 
     if t is None:
-        return dfsResult
+        return visitedNodes
 
-    visited = []
     stack = [t]
     while stack:
 
         node = stack.pop()
 
-        if node not in visited:
-            dfsResult.append(node.val)
-        visited.append(node)
+        if node not in visitedNodes:
+            visitedNodes.append(node)
 
         # Note: it's important that RIGHT is added to the stack
         # before LEFT, so that LEFT is on the top of the stack and
@@ -25,7 +25,7 @@ def dfs(t: btrees.TreeNode) -> []:
         if node.left:
             stack.append(node.left)
 
-    return dfsResult
+    return [node.val for node in visitedNodes]
 
 
 numResult = dfs(btrees.numTree)
