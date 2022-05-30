@@ -2,30 +2,23 @@ import btrees
 
 def dfs(t: btrees.TreeNode) -> []:
 
-    # Note: keep track of the nodes here, and then return the values at
-    # the end if desired. This allows for the values to not be unique.
-    visitedNodes = []
-
     if t is None:
-        return visitedNodes
+        return []
 
     stack = [t]
+    visited = []
+
     while stack:
 
         node = stack.pop()
+        visited.append(node)
 
-        if node not in visitedNodes:
-            visitedNodes.append(node)
-
-        # Note: it's important that RIGHT is added to the stack
-        # before LEFT, so that LEFT is on the top of the stack and
-        # we continue traversing down the left side as much as possible.
-        if node.right:
+        if node.right and node.right not in stack:
             stack.append(node.right)
-        if node.left:
+        if node.left and node.left not in stack:
             stack.append(node.left)
 
-    return [node.val for node in visitedNodes]
+    return [node.val for node in visited]
 
 
 def dfs_recursive_helper(t: btrees.TreeNode, visited = None) -> []:
@@ -45,15 +38,16 @@ def dfs_recursive(t: btrees.TreeNode) -> []:
     return [node.val for node in dfs_recursive_helper(t)]
 
 
+
 numResult = dfs(btrees.numTree)
 assert numResult == btrees.numDFS
-assert dfs_recursive(btrees.numTree) == btrees.numDFS
 print(numResult)
+print(dfs_recursive(btrees.numTree))
 
 alphaResult = dfs(btrees.alphaTree)
 assert alphaResult == btrees.alphaDFS
-assert dfs_recursive(btrees.alphaTree) == btrees.alphaDFS
 print(alphaResult)
+print(dfs_recursive(btrees.alphaTree))
 
 assert dfs(btrees.emptyTree) == []
 assert dfs_recursive(btrees.emptyTree) == []
