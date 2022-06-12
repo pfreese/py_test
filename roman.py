@@ -26,4 +26,4 @@ assert(toRoman("IV") == 4)
 assert(toRoman("XIV") == 14)
 
 assert(toRoman("CMLIX") == 959)
-assert(toRoman("MDXXIV") == 15244)
+assert(toRoman("MDXXIV") == 1524)
