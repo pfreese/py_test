@@ -3,7 +3,6 @@ import btrees
 def dfs(t: btrees.TreeNode) -> []:
 
 
-
 def dfs_recursive(t: btrees.TreeNode) -> []:
 
 

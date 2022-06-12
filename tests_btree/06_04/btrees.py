@@ -1,11 +1,11 @@
 class TreeNode:
-    def __init__(self, val, left=None, right=None):
+    def __init__(self, val: int, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
 # From: https://stackoverflow.com/questions/43097045/best-way-to-construct-a-binary-tree-from-a-list-in-python
-def to_binary_tree(items: list) -> TreeNode:
+def to_binary_tree(items: list[int]) -> TreeNode:
     """Create BT from list of values."""
     n = len(items)
     if n == 0:

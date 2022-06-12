@@ -25,6 +25,7 @@ def to_binary_tree(items: list) -> TreeNode:
 
 # Integers.
 numTree = to_binary_tree([1, 2, 3, 4, 5, 6, 7])
+print(numTree)
 numBFS = [1, 2, 3, 4, 5, 6, 7]
 numDFS = [1, 2, 4, 5, 3, 6, 7]
 numIIT = [4, 2, 5, 1, 6, 3, 7]

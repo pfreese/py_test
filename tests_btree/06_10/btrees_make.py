@@ -1,5 +1,6 @@
+# Make TreeNode class.
 class TreeNode:
-    def __init__(self, val, left=None, right=None):
+    def __init__(self, val, left = None, right = None):
         self.val = val
         self.left = left
         self.right = right
@@ -11,20 +12,20 @@ def to_binary_tree(items: list) -> TreeNode:
     if n == 0:
         return None
 
-    def inner(index: int = 0) -> TreeNode:
-        """Closure function using recursion to build tree"""
-        if n <= index or items[index] is None:
+    def build(i):
+        if i >= n or items[i] is None:
             return None
+        node = TreeNode(items[i])
+        node.left = build((2*i) + 1)
+        node.right = build((2*i) + 2)
 
-        node = TreeNode(items[index])
-        node.left = inner(2 * index + 1)
-        node.right = inner(2 * index + 2)
         return node
+    return build(0)
 
-    return inner()
 
 # Integers.
 numTree = to_binary_tree([1, 2, 3, 4, 5, 6, 7])
+print(numTree)
 numBFS = [1, 2, 3, 4, 5, 6, 7]
 numDFS = [1, 2, 4, 5, 3, 6, 7]
 numIIT = [4, 2, 5, 1, 6, 3, 7]
