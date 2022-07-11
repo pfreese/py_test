@@ -2,18 +2,18 @@ import sort_utils
 
 
 
-def bucketSort(array):
+def bucket_sort(array):
 
 
 # TESTS
 
-intsActual = bucketSort(sort_utils.unsortedInts)
+intsActual = bucket_sort(sort_utils.unsortedInts)
 assert intsActual == sort_utils.sortedInts
 print(intsActual)
 
-floatsActual = bucketSort(sort_utils.unsortedFloats)
+floatsActual = bucket_sort(sort_utils.unsortedFloats)
 assert floatsActual == sort_utils.sortedFloats
 print(floatsActual)
 
-assert bucketSort([]) == []
-assert bucketSort([2]) == [2]
+assert bucket_sort([]) == []
+assert bucket_sort([2]) == [2]

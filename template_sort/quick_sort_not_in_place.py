@@ -1,16 +1,16 @@
 import sort_utils
 
-def quickSort(array):
+def quick_sort(array):
 
 # TESTS
 
-intsActual = quickSort(sort_utils.unsortedInts)
+intsActual = quick_sort(sort_utils.unsortedInts)
 assert intsActual == sort_utils.sortedInts
 print(intsActual)
 
-floatsActual = quickSort(sort_utils.unsortedFloats)
+floatsActual = quick_sort(sort_utils.unsortedFloats)
 assert floatsActual == sort_utils.sortedFloats
 print(floatsActual)
 
-assert quickSort([]) == []
-assert quickSort([2]) == [2]
+assert quick_sort([]) == []
+assert quick_sort([2]) == [2]

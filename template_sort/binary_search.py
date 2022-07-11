@@ -3,7 +3,7 @@ def binary_search_recursive(array, val):
 
 
 # RETURN INDEX.
-def binary_search_interative(array, val):
+def binary_search_iterative(array, val):
 
 
 
@@ -30,10 +30,10 @@ assert not binary_search_recursive([], 3)
 
 
 # TEST ITERATIVE.
-assert binary_search_interative(test_search_array, 3) == -1
-assert binary_search_interative(test_search_array, -2.5) == 1
-assert binary_search_interative(test_search_array, 0) == 2
-assert binary_search_interative(test_search_array, 1.2) == 4
+assert binary_search_iterative(test_search_array, 3) == -1
+assert binary_search_iterative(test_search_array, -2.5) == 1
+assert binary_search_iterative(test_search_array, 0) == 2
+assert binary_search_iterative(test_search_array, 1.2) == 4
 
-assert binary_search_interative(test_search_array, 100) == 7
-assert binary_search_interative(test_search_array, 101) == -1
+assert binary_search_iterative(test_search_array, 100) == 7
+assert binary_search_iterative(test_search_array, 101) == -1

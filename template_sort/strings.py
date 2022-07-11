@@ -1,6 +1,7 @@
 def append_strs_efficient(x, y):
 
 
+
 assert append_strs_efficient("abcd", "efg") == "abcdefg"
 
 
@@ -50,7 +51,6 @@ assert not str_is_upper("AbCC")
 
 
 def str_is_lower(str):
-
 
 assert str_is_lower("abc")
 assert not str_is_lower("aaA")

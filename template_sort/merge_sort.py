@@ -1,19 +1,21 @@
 import sort_utils
 
 
-def mergeSort(array):
+
+def merge_sort(array):
+
 
 
 
 # TESTS
 
-intsActual = mergeSort(sort_utils.unsortedInts)
+intsActual = merge_sort(sort_utils.unsortedInts)
 assert intsActual == sort_utils.sortedInts
 print(intsActual)
 
-floatsActual = mergeSort(sort_utils.unsortedFloats)
+floatsActual = merge_sort(sort_utils.unsortedFloats)
 assert floatsActual == sort_utils.sortedFloats
 print(floatsActual)
 
-assert mergeSort([]) == []
-assert mergeSort([2]) == [2]
+assert merge_sort([]) == []
+assert merge_sort([2]) == [2]

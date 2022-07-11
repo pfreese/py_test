@@ -1,14 +1,14 @@
 import sort_utils
 
-def radixSort(array):
+def radix_sort(array):
 
 
 # TESTS
 
-actual = radixSort(sort_utils.radixInputVals)
+actual = radix_sort(sort_utils.radixInputVals)
 print(actual)
 assert actual == sort_utils.radixSortedVals
 
 
-assert radixSort([]) == []
-assert radixSort([2000]) == [2000]
+assert radix_sort([]) == []
+assert radix_sort([2000]) == [2000]

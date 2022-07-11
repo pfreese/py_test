@@ -37,3 +37,33 @@ def filter_even(lst):
     return list(filter(lambda x: x % 2 == 0, test_ls))
 
 assert filter_even(test_ls) == [4, 10]
+
+# LOOP LOGIC.
+# CBP (continue; break; pass)
+# (Customs and Border Patrol)
+
+# Print 1-10 except for 5.
+result = []
+for i in range(10):
+    if i == 5:
+        continue
+    result.append(i)
+assert result == [0, 1, 2, 3, 4, 6, 7, 8, 9]
+
+# Two loops each 0, 1, 2; break inner loop once it hits 1.
+result = []
+for i in range(3):
+    for j in range(3):
+        if j == 1:
+            break
+        result.append(f"i={i}, j={j}")
+assert result == ['i=0, j=0', 'i=1, j=0', 'i=2, j=0']
+
+
+# Pass: skip over x=5 but print all 0-10.
+result = []
+for i in range(10):
+    if i == 5:
+        pass
+    result.append(i)
+assert result == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

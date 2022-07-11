@@ -1,15 +1,16 @@
 import sort_utils
 
 
-def countingSort(array):
+def counting_sort(array):
+
 
 
 
 # TESTS
 
-intsActual = countingSort(sort_utils.unsortedInts)
+intsActual = counting_sort(sort_utils.unsortedInts)
 assert intsActual == sort_utils.sortedInts
 print(intsActual)
 
-assert countingSort([]) == []
-assert countingSort([2]) == [2]
+assert counting_sort([]) == []
+assert counting_sort([2]) == [2]
